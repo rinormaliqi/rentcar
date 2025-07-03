@@ -67,14 +67,14 @@ export default function ContactSection() {
             <PhoneIcon className="w-5 h-5 mt-0.5 text-[#4682B4]" />
             <div>
               <h3 className="font-medium">Telefoni</h3>
-              <p>+383 (44) 28 38 28</p>
+              <p>+383 (44) 00 00 00</p>
             </div>
           </li>
           <li className="flex items-start gap-3">
             <MailIcon className="w-5 h-5 mt-0.5 text-[#4682B4]" />
             <div>
               <h3 className="font-medium">Email</h3>
-              <p>info@moov.rent</p>
+              <p>info@rent.net</p>
             </div>
           </li>
           <li className="flex items-start gap-3">

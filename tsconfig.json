@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/footer.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -10,7 +10,7 @@ const Header = () => {
   useEffect(() => {
     const onScroll = () => {
       const scrollPosition = window.scrollY;
-      const triggerHeight = window.innerHeight * 0.5;
+      const triggerHeight = window.innerHeight * 0.01;
       setScrolled(scrollPosition > triggerHeight);
     };
 

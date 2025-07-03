@@ -1,7 +1,7 @@
 'use client';
 
 export default function WhatsAppButton() {
-  const phoneNumber = '38344879290'; // <-- without '+' or leading zeros
+  const phoneNumber = '38345321992'; // <-- without '+' or leading zeros
   const message = 'Hello, I am interested in your services!';
   
   const handleClick = () => {

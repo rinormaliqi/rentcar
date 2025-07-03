@@ -85,7 +85,7 @@ export default function CarSliderS() {
             </button>
 
             <div className="mt-5 text-[#4682B4] font-bold flex items-center gap-2 text-sm">
-              <FaPhoneAlt /> +383 (44) 879 290
+              <FaPhoneAlt /> +383 (44) 00 00 00
             </div>
           </div>
         </div>

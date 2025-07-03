@@ -36,12 +36,6 @@ export default function HomePage() {
         </h2>
         <ContactSection />
       </section>
-
-      <footer className="border-t-2 border-t-[#4682B4] text-[#4682B4] py-6 text-center  ">
-        <p>
-          &copy; {new Date().getFullYear()} All rights reserved by Rinor Maliqi
-        </p>
-      </footer>
     </main>
   );
 }
