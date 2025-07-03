@@ -1,0 +1,81 @@
+[
+    {
+      "id": 1,
+      "name": "BMW 3",
+      "fuel": "Benzin",
+      "price": 40,
+      "status": "I lirë",
+      "year": 2024,
+      "doors": 4,
+      "seats": 5,
+      "transmission": "Automatik",
+      "insurance": "Kasko të përfshirë",
+      "image": "/cars/bmw3.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Audi A4",
+      "fuel": "Benzin",
+      "price": 35,
+      "status": "I lirë",
+      "year": 2023,
+      "doors": 4,
+      "seats": 5,
+      "transmission": "Manual",
+      "insurance": "Kasko të përfshirë",
+      "image": "/cars/audia4.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ford Fiesta",
+      "fuel": "Benzin",
+      "price": 40,
+      "status": "I lirë",
+      "year": 2024,
+      "doors": 4,
+      "seats": 5,
+      "transmission": "Automatik",
+      "insurance": "Kasko të përfshirë",
+      "image": "/cars/ford.jpg"
+    },
+    {
+      "id": 4,
+      "name": "BMW X5",
+      "fuel": "Benzin",
+      "price": 40,
+      "status": "I lirë",
+      "year": 2024,
+      "doors": 4,
+      "seats": 5,
+      "transmission": "Automatik",
+      "insurance": "Kasko të përfshirë",
+      "image": "/cars/bmwx5.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Audi A8",
+      "fuel": "Benzin",
+      "price": 40,
+      "status": "I lirë",
+      "year": 2024,
+      "doors": 4,
+      "seats": 5,
+      "transmission": "Automatik",
+      "insurance": "Kasko të përfshirë",
+      "image": "/cars/AudiA8.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Bmw 5 GT",
+      "fuel": "Benzin",
+      "price": 40,
+      "status": "I lirë",
+      "year": 2024,
+      "doors": 4,
+      "seats": 5,
+      "transmission": "Automatik",
+      "insurance": "Kasko të përfshirë",
+      "image": "/cars/bmwgt.jpg"
+    }
+  ]
+  
