@@ -50,13 +50,13 @@ const Header = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="hidden md:flex gap-8 font-semibold text-black"
         >
-          <Link href="/" className="text-[#87CEFA]">
+          <Link href="#home" className="text-[#87CEFA]">
             Home
           </Link>
-          <Link href="/makinat" className="hover:text-[#87CEFA]">
+          <Link href="#makinat" className="hover:text-[#87CEFA]">
             Makinat
           </Link>
-          <Link href="/kontakti" className="hover:text-[#87CEFA]">
+          <Link href="#kontakt" className="hover:text-[#87CEFA]">
             Kontakti
           </Link>
         </motion.nav>
@@ -68,7 +68,7 @@ const Header = () => {
           transition={{ duration: 0.4, delay: 0.4 }}
         >
           <Link
-            href="/rezervo"
+            href="#rezervo"
             className="ml-4 bg-[#87CEFA] text-white px-5 py-2 rounded-lg shadow-lg font-medium hover:bg-[#005a9c] transition"
           >
             Rezervo

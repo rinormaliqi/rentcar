@@ -62,7 +62,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-3 sm:gap-4"
         >
           <Link
-            href="/rezervo"
+            href="#rezervo"
             className="bg-[#4682B4] hover:bg-[#005A9C] text-white px-5 py-3 md:px-6 md:py-3 rounded-lg shadow-lg font-semibold transition text-center text-sm md:text-base"
           >
             Rezervo Makinën 📅

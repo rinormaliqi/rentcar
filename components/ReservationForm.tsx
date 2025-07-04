@@ -4,17 +4,17 @@ import {
   FaCar,
   FaMapMarkerAlt,
   FaCalendarAlt,
+  FaClock,
   FaEuroSign,
 } from "react-icons/fa";
 import ConfirmationModal from "./Modal";
 import cars from "../public/cars.json";
 
-// Define the shape of form errors
 interface FormErrors {
   car_type?: string;
   pickup_date?: string;
   dropoff_date?: string;
-  [key: string]: string | undefined; // Index signature for dynamic properties
+  [key: string]: string | undefined;
 }
 
 export default function CarRentalForm() {
@@ -26,27 +26,22 @@ export default function CarRentalForm() {
     pickup_location: "Aeroportin e Prishtinës",
     dropoff_location: "Aeroportin e Prishtinës",
     pickup_date: "",
-    pickup_time: "",
+    pickup_time: "10:00",
     dropoff_date: "",
-    dropoff_time: "",
+    dropoff_time: "10:00",
   });
 
-  // Calculate min dates for date inputs
   const today = new Date().toISOString().split("T")[0];
   const minDropoffDate = formData.pickup_date || today;
 
-  // Calculate price when car or dates change
   useEffect(() => {
     if (formData.car_type && formData.pickup_date && formData.dropoff_date) {
       const selectedCar = cars.find((car) => car.name === formData.car_type);
-
       if (selectedCar) {
-        // Calculate number of days
         const start = new Date(formData.pickup_date);
         const end = new Date(formData.dropoff_date);
         const timeDiff = end.getTime() - start.getTime();
         const days = Math.ceil(timeDiff / (1000 * 3600 * 24)) || 1;
-
         setTotalPrice(selectedCar.price * days);
       }
     } else {
@@ -59,8 +54,6 @@ export default function CarRentalForm() {
   ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-
-    // Clear error when field is updated
     if (formErrors[name]) {
       setFormErrors((prev) => ({ ...prev, [name]: "" }));
     }
@@ -68,35 +61,28 @@ export default function CarRentalForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Validate form
     const errors: FormErrors = {};
     const now = new Date();
     const pickupDate = new Date(formData.pickup_date);
 
-    // Check for past dates
     if (formData.pickup_date && pickupDate < now) {
       errors.pickup_date = "Nuk mund të zgjidhni një datë të kaluar";
     }
 
-    // Check if dropoff is before pickup
     if (formData.pickup_date && formData.dropoff_date) {
       const dropoffDate = new Date(formData.dropoff_date);
-
       if (dropoffDate < pickupDate) {
         errors.dropoff_date =
           "Data e kthimit duhet të jetë pas datës së marrjes";
       }
     }
 
-    // Check required fields
     if (!formData.car_type) errors.car_type = "Ju lutemi zgjidhni një makinë";
     if (!formData.pickup_date)
       errors.pickup_date = "Ju lutemi zgjidhni një datë marrjeje";
     if (!formData.dropoff_date)
       errors.dropoff_date = "Ju lutemi zgjidhni një datë kthimi";
 
-    // Set errors or show modal
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
     } else {
@@ -196,7 +182,7 @@ export default function CarRentalForm() {
           {/* Pickup Time */}
           <div>
             <label className="font-semibold mb-1 flex items-center gap-2">
-              <span className="invisible">.</span> Ora e marrjes
+              <FaClock className="text-[#005A9C]" /> Ora e marrjes
             </label>
             <input
               type="time"
@@ -232,7 +218,7 @@ export default function CarRentalForm() {
           {/* Dropoff Time */}
           <div>
             <label className="font-semibold mb-1 flex items-center gap-2">
-              <span className="invisible">.</span> Ora e kthimit
+              <FaClock className="text-[#005A9C]" /> Ora e kthimit
             </label>
             <input
               type="time"
@@ -248,10 +234,10 @@ export default function CarRentalForm() {
           <div className="lg:col-span-3 bg-gray-50 p-4 rounded-lg mb-4">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <FaEuroSign className="text-green-600" />
+                <FaEuroSign className="text-[#87CEFA]" />
                 <span className="font-semibold">Çmimi i llogaritur:</span>
               </div>
-              <div className="text-xl font-bold text-green-700">
+              <div className="text-md font-bold text-[#87CEFA]">
                 {totalPrice > 0
                   ? `${totalPrice} €`
                   : "Zgjidhni makinën dhe datat"}
@@ -260,7 +246,9 @@ export default function CarRentalForm() {
             {totalPrice > 0 && (
               <div className="text-sm text-gray-600 mt-2">
                 Ky çmim përfshin taksat dhe përdorimin e plotë të makinës për
-                periudhën e zgjedhur.
+                periudhën e zgjedhur. <br />
+                <span className="font-medium">Shënim:</span> Çmimi llogaritet
+                vetëm në bazë të datave, ora nuk ndikon në llogaritje.
               </div>
             )}
           </div>

@@ -79,11 +79,11 @@ export default function CarSliderS() {
                 <strong>Sigurimi:</strong> {selected.insurance}
               </li>
             </ul>
-
+<a href="#rezervo">
             <button className="mt-6 w-full bg-[#87CEFA] hover:bg-[#005a9c] text-white font-semibold py-3 rounded-lg shadow transition">
               REZERVO
             </button>
-
+            </a>
             <div className="mt-5 text-[#4682B4] font-bold flex items-center gap-2 text-sm">
               <FaPhoneAlt /> +383 (44) 00 00 00
             </div>
